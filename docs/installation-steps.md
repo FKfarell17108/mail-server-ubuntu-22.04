@@ -275,6 +275,10 @@ password
 
 Email address automatically becomes: ```user1@farell.local```
 
+Once logged in, you can immediately test by sending a message from user1 to user 2.
+
+![Testing](testing.png)
+
 ---
 
 # Troubleshooting
