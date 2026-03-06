@@ -1,0 +1,24 @@
+myhostname = mail.farell.local
+mydomain = farell.local
+myorigin = /etc/mailname
+
+inet_interfaces = all
+inet_protocols = ipv4
+
+mydestination = $myhostname, localhost.$mydomain, localhost, $mydomain
+
+home_mailbox = Maildir/
+
+# SMTP Authentication
+smtpd_sasl_auth_enable = yes
+smtpd_sasl_type = dovecot
+smtpd_sasl_path = private/auth
+
+smtpd_sasl_security_options = noanonymous
+broken_sasl_auth_clients = yes
+
+# SMTP Restrictions
+smtpd_recipient_restrictions =
+ permit_sasl_authenticated,
+ permit_mynetworks,
+ reject_unauth_destination
